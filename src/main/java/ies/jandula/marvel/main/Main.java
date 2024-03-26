@@ -12,8 +12,10 @@ import java.util.TreeMap;
 
 import ies.jandula.marvel.exceptions.MarvelExceptions;
 
-public class Main {
-    public static void main(String[] args) throws MarvelExceptions {
+public class Main
+{
+    public static void main(String[] args) throws MarvelExceptions 
+    {
         String archivo = "src" + File.separator + "main" + File.separator + "resources" + File.separator + "marvelHeroes.csv";
 
         File file = new File(archivo);
@@ -82,7 +84,8 @@ public class Main {
 
             // Imprimir los tres superhéroes con más poderes
             int contador = 0;
-            System.out.println("Superhéroes con más poderes:");
+            System.out.println("Ranking de superhéroes:\n");
+            System.out.println("Los tres mejores:");
             for (Map.Entry<Integer, String> entry : superHeroesMasPoder.entrySet()) 
             {
                 if (contador < 3) 
@@ -95,7 +98,7 @@ public class Main {
             // Imprimir los tres superhéroes con menos poderes
             contador = 0;
             
-            System.out.println("\nSuperhéroes con menos poderes:");
+            System.out.println("\nLos tres peores:");
             for (Map.Entry<Integer, String> entry : superHeroesMenosPoder.entrySet()) 
             {
                 if (contador < 3) 
@@ -132,7 +135,8 @@ public class Main {
             }
 
             // Imprimir los tres superpoderes más comunes
-            System.out.println("Superpoderes más comunes:");
+            System.out.println("\nSúper poderes:\n");
+            System.out.println("Más comunes:");
             int contadorPoderes = 0;
             for (Map.Entry<Integer, String> entry : superPoderesMasComunes.entrySet()) {
                 if (contadorPoderes < 3) {
@@ -150,7 +154,7 @@ public class Main {
             }
 
             // Imprimir los tres superpoderes menos comunes
-            System.out.println("\nSuperpoderes menos comunes:");
+            System.out.println("\nMenos comunes:");
             contadorPoderes = 0;
             for (Map.Entry<Integer, String> entry : superPoderesMenosComunes.entrySet()) {
                 if (contadorPoderes < 3) {
